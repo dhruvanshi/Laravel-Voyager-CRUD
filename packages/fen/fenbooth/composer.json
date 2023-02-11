@@ -1,0 +1,23 @@
+{
+    "name": "fen/fenbooth",
+    "description": "Additional package to voyager package",
+    "authors": [{
+        "name": "dev.ast1122",
+        "email": "dev.ast1122@email.com"
+    }],
+    "autoload": {
+        "psr-4": {
+            "Fen\\Fenbooth\\": "src/"
+        }
+    },
+    "require": {
+        "laravel/ui": "^3.4"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Fen\\Fenbooth\\Providers\\FenBoothServiceProvider"
+            ]
+        }
+    }
+}
