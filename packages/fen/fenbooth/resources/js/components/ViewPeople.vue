@@ -3,10 +3,7 @@
         <div class="row my-5" v-if="people && people.data.length > 0">
             <div class="col-3 my-3" v-for="(person, index) in people.data" :key="index">
                 <div class="card">
-                    <img class="card-img-top"
-                        src="http://localhost:8000/storage/person/February2023/2XmdYpwUaNFf3XamyHIg-cropped.png"
-                        alt="Card image">
-                    <!-- <img class="card-img-top" v-bind:src="'/storage/' + person.image" alt="Card image"> -->
+                    <img class="card-img-top" v-bind:src="'/storage/' + person.image" alt="Card image">
                     <div class="card-body">
                         <h5 class="card-title">{{ person.firstname }}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">{{ person.title }}</h6>
@@ -19,7 +16,7 @@
 </template>
 
 <script>
-import pagination from 'laravel-vue-pagination'
+
 export default {
     components: {
         pagination

@@ -27,11 +27,11 @@ Route::get('fenview', function () {
 });
 
 Route::get('people', function () {
-    return view('fenbooth::layouts/app');
+    return view('fenbooth::people');
 });
 
 // Clear all cache:
-Route::get('/clear-all-cache', function() {
+Route::get('/cache', function() {
     Artisan::call('cache:clear');
 	Artisan::call('route:cache');
  	Artisan::call('config:cache');

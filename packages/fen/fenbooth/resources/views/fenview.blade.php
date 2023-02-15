@@ -11,7 +11,7 @@
 
 <body>
     <div class="container">
-        <h1>this is view</h1>
+        <h1>this is fenview.blade.php</h1>
     </div>
 </body>
 </html>

@@ -3,7 +3,6 @@
 namespace Fen\Fenbooth\Providers;
 
 use Fen\Fenbooth\Console\Commands\InstallCommand;
-// use Fen\Fenbooth\Console\Commands\MenuCommand;
 use Illuminate\Support\ServiceProvider;
 
 class FenBoothServiceProvider extends ServiceProvider
@@ -35,16 +34,23 @@ class FenBoothServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'fenbooth');
         $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
         $this->publishes([
-            __DIR__ . '/../../publishable/js' => public_path('fenbooth/js'),
+            __DIR__ . '/../../publishable/default' => public_path('storage/person/default'),
         ], 'public');
-        $this->publishes([
-            __DIR__.'/../../publishable/config' => config_path(),
-        ]);
+
+        // $this->publishes([
+        //     __DIR__ . '/../../publishable/js' => public_path('fenbooth/js'),
+        // ], 'public');
+        // $this->publishes([
+        //     __DIR__.'/../../publishable/config' => config_path(),
+        // ]);
+
+        // $this->publishes([
+        //     __DIR__ . '/../../resources/assets' => resource_path('assets/fen/fenbooth'
+        // )], 'vue-components');
 
         if ($this->app->runningInConsole()) {
             $this->commands([
                 InstallCommand::class,
-                // MenuCommand::class,
                 // InstallCommand::class,
                 // NetworkCommand::class,
             ]);

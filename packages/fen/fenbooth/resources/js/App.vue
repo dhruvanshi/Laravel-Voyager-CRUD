@@ -4,7 +4,7 @@
             <div class="collapse navbar-collapse">
                 <div class="navbar-nav">
                     <router-link to="/people" class="nav-item nav-link">Speaker List </router-link>
-                    <!-- <router-link to="/create" class="nav-item nav-link">Create</router-link> -->
+                    <router-link to="/create" class="nav-item nav-link">Create</router-link>
                     
                 </div>
             </div>

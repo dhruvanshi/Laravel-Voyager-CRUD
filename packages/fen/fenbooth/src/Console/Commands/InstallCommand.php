@@ -81,7 +81,8 @@ class InstallCommand extends Command
         $this->info('Seeding data into the database');
         $this->seed('FenBoothDatabaseSeeder');
 
-        $this->call('vendor:publish', ['--provider' => FenBoothServiceProvider::class, '--tag' => 'public', '--force']);
+        // $this->call('vendor:publish', ['--provider' => FenBoothServiceProvider::class, '--tag' => 'public', '--force']);
+        // $this->call('vendor:publish', ['--provider' => FenBoothServiceProvider::class, '--tag' => 'vue-components', '--force']);
 
         $this->info('Successfully installed Voyager Fenbooth AdditionalPackage! Enjoy');
     }
