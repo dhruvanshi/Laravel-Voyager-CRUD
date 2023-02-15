@@ -3,6 +3,7 @@
 namespace Fen\Fenbooth\Providers;
 
 use Fen\Fenbooth\Console\Commands\InstallCommand;
+// use Fen\Fenbooth\Console\Commands\MenuCommand;
 use Illuminate\Support\ServiceProvider;
 
 class FenBoothServiceProvider extends ServiceProvider
@@ -51,6 +52,7 @@ class FenBoothServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 InstallCommand::class,
+                // MenuCommand::class,
                 // InstallCommand::class,
                 // NetworkCommand::class,
             ]);

@@ -47,7 +47,11 @@ class PersonController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $person = Person::create($request->post());
+        return response()->json([
+            'message'=>'Person Created Successfully!!',
+            'person'=>$person
+        ]);
     }
 
     /**
@@ -58,7 +62,8 @@ class PersonController extends Controller
      */
     public function show($id)
     {
-        //
+        $person = Person::find($id);
+        return response()->json($person);
     }
 
     /**
@@ -81,7 +86,9 @@ class PersonController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $person = Person::find($id);
+        $person->update($request->all());
+        return response()->json('Person Details updated!');
     }
 
     /**

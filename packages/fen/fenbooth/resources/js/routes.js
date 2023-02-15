@@ -1,20 +1,20 @@
-import AllProduct from './components/ViewPeople.vue';
-import CreateProduct from './components/CreatePerson.vue';
-import EditProduct from './components/EditPerson.vue';
+import ViewPeople from './components/ViewPeople.vue';
+import AddPerson from './components/AddPerson.vue';
+import EditPerson from './components/EditPerson.vue';
 
 export const routes = [{
         name: 'people',
         path: '/people',
-        component: AllProduct
+        component: ViewPeople
     },
     {
-        name: 'create',
-        path: '/create',
-        component: CreateProduct
+        name: 'add',
+        path: '/people/add',
+        component: AddPerson
     },
     {
         name: 'edit',
-        path: '/edit/:id',
-        component: EditProduct
+        path: '/people/edit/:id',
+        component: EditPerson
     }
 ];

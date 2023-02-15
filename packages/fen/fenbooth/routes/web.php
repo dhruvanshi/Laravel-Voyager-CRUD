@@ -27,7 +27,7 @@ Route::get('fenview', function () {
 });
 
 Route::get('people', function () {
-    return view('fenbooth::people');
+    return view('fenbooth::layouts/app');
 });
 
 // Clear all cache:

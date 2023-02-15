@@ -16,6 +16,6 @@ const mix = require('laravel-mix');
 //     .sass('resources/sass/app.scss', 'public/css');
 
 
-mix.js('fen/fenbooth/resource/js/app.js', 'public/js')
+mix.js('packages/fen/fenbooth/resources/js/app.js', 'public/js')
     .vue()
     .sass('resources/sass/app.scss', 'public/css');
